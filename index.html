@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tin@sec-dev-portfolio:~$ | Tin Maung Soe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       INTERACTIVE TERMINAL PORTFOLIO (SCREEN VIEW)
+       ======================================================================== -->
+  <div class="terminal-window" id="terminal-window">
+    <div class="terminal-header">
+      <div class="window-controls">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="window-title">tin-: ~/portfolio</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">Save / Print Clean CV</button>
+    </div>
+
+    <!-- Clickable Command Shortcuts -->
+    <div class="quick-bar">
+      <span>Commands:</span>
+      <button class="cmd-chip" data-cmd="help">help</button>
+      <button class="cmd-chip" data-cmd="about">about</button>
+      <button class="cmd-chip" data-cmd="projects">projects</button>
+      <button class="cmd-chip" data-cmd="skills">skills</button>
+      <button class="cmd-chip" data-cmd="experience">experience</button>
+      <button class="cmd-chip" data-cmd="certs">certs</button>
+      <button class="cmd-chip" data-cmd="education">education</button>
+      <button class="cmd-chip" data-cmd="contact">contact</button>
+      <button class="cmd-chip" data-cmd="clear">clear</button>
+    </div>
+
+    <!-- Scrollable Terminal Screen -->
+    <div class="terminal-body" id="terminal-body">
+      <div class="output-block">
+        <div class="ascii-banner">
+==========================================================================
+  TIN MAUNG SOE — FULL STACK WEB DEVELOPER &amp; CYBERSECURITY SPECIALIST
+==========================================================================</div>
+        <p>Welcome! Type <strong style="color: var(--prompt-user);">help</strong> and press <strong>Enter</strong> (or click any command button above) to inspect my projects, security labs, and experience.</p>
+      </div>
+
+      <!-- Dynamic Command History Renders Here -->
+      <div id="output-container"></div>
+
+      <!-- Live Command Input Line -->
+      <div class="input-line">
+        <span class="user-host">visitor@tin-portfolio</span>:<span class="path">~</span>$
+        <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus placeholder="Type 'help' or 'projects'..." />
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       RECRUITER-FRIENDLY RESUME LAYOUT (AUTOMATICALLY USED FOR PRINT / PDF)
+       ======================================================================== -->
+  <div class="print-resume">
+    <h1>TIN MAUNG SOE</h1>
+    <div class="sub">FULL STACK WEB DEVELOPER | CYBERSECURITY SPECIALIST &amp; PENETRATION TESTER</div>
+    <div class="contact-line">
+      Thailand | tinspeedy685@gmail.com | Live Project: rohana-pet-shop.vercel.app
+    </div>
+
+    <h2>Professional Summary</h2>
+    <p>
+      First-Class B.Sc. (Hons) Cybersecurity graduate and current MBA student at Bangkok University, blending Full Stack Web Development with offensive and defensive security expertise. Ranked in the Top 1% on TryHackMe with hands-on penetration testing experience (Burp Suite, Nmap, Metasploit, Wireshark) alongside full-stack development skills in React, JavaScript, Node.js, Python, and Firebase.
+    </p>
+
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Frontend &amp; Mobile:</strong> HTML, CSS, JavaScript, React.js, UI/UX &amp; SEO Optimization, Android (Java, Kotlin basics)</li>
+      <li><strong>Backend, Databases &amp; Cloud:</strong> Node.js, Firebase, Django, Python, MySQL, PostgreSQL, Docker, AWS &amp; Azure Fundamentals</li>
+      <li><strong>Cybersecurity &amp; Pentesting:</strong> Web/Mobile App Pentesting (XSS, SQLi), Nmap, Burp Suite, Metasploit, Wireshark, Linux/Windows Hardening</li>
+      <li><strong>DevOps &amp; Tools:</strong> GitHub, GitHub Actions (CI/CD), Bash/Linux CLI, VS Code, Figma</li>
+    </ul>
+
+    <h2>Experience &amp; Featured Projects</h2>
+    <div class="print-item-header"><span>Full Stack Development Intern — CodeAlpha</span><span>Nov 2026 – Dec 2026</span></div>
+    <ul>
+      <li>Selected for the Virtual Full Stack Development Internship (ID: CA/DF1/434588), building practical full-stack assignments and production-ready web applications.</li>
+    </ul>
+
+    <div class="print-item-header"><span>Front-End &amp; Full Stack Developer (Freelance &amp; Projects)</span><span>Jul 2022 – Present</span></div>
+    <ul>
+      <li>Built and deployed responsive web applications including <strong>Rohana Pet Shop</strong> (rohana-pet-shop.vercel.app) using modern front-end architecture and performance optimization.</li>
+      <li>Developed a real-time chat application using React and Firebase with user authentication, live messaging, and cloud data storage.</li>
+      <li>Implemented GitHub Actions CI/CD pipelines and applied SEO best practices to improve page load speed and visibility.</li>
+    </ul>
+
+    <div class="print-item-header"><span>Cybersecurity Intern — ShadowFox</span><span>May 2024 – Jun 2024</span></div>
+    <ul>
+      <li>Conducted penetration testing on client websites, uncovering network and application vulnerabilities including XSS and SQL injection risks.</li>
+      <li>Intercepted and analyzed network traffic with Wireshark, simulated attacks via Metasploit, and authored detailed vulnerability remediation reports.</li>
+    </ul>
+
+    <div class="print-item-header"><span>Cybersecurity Enthusiast &amp; Researcher — TryHackMe (Top 1%) &amp; Hack The Box</span><span>2021 – Present</span></div>
+    <ul>
+      <li>Completed 100+ hands-on security challenges covering privilege escalation, web exploitation, and network defense.</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="print-item-header"><span>Master of Business Administration (MBA), English Program — Bangkok University</span><span>Jul 2026 – Present</span></div>
+    <div class="print-item-header"><span>B.Sc. (Hons) Cybersecurity (First Class) — Coventry University</span><span>Jul 2022 – Oct 2023</span></div>
+    <div class="print-item-header"><span>Higher Diploma in Business Infocom Technology — University of Sunderland</span><span>Nov 2019 – Dec 2020</span></div>
+
+    <h2>Certifications &amp; Languages</h2>
+    <p><strong>Certifications:</strong> TryHackMe (SOC Level 1, SOC Level 2, Junior Penetration Tester, Offensive Pentesting), Foundation Level Threat Intelligence Analyst (arcX), Certified Cyber Security Analyst (CyberWarFare Labs).</p>
+    <p><strong>Languages:</strong> Burmese (Native), English (Fluent), Thai (Basic).</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
